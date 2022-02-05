@@ -15,6 +15,7 @@ const app = express();
 // Middleware
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 // Routes
 app.get('/', (req, res) => {

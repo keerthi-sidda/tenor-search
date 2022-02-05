@@ -1,19 +1,31 @@
-<h1>Search for GIFS</h1>
-<form action="/">
-  <input type="text" name="term">
-  <button type="submit">Search</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gif Search</title>
+    <link rel="stylesheet" href="styles.css">
 
-<%  gifs.forEach(function(gif){ %>
+</head>
+<body>
 
-    <div class="tenor-gif-embed" data-postid="<%= gif.id %>" data-share-method="host" data-width="500px"
-        data-aspect-ratio="1.2266666666666666">
-        <a href="<%= gif.itemurl %>"></a>
-        <a href="<%= gif.url %>"></a>
-      </div>
-      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-    
+    <div class="container">
+        <h1>Search for GIFS</h1>
+        <form action="/">
+            <input type="text" name="term">
+            <button type="submit">Search</button>
+        </form>
 
-<% }) %>
+        <%  gifs.forEach(function(gif){ %>
 
+            <div class="tenor-gif-embed" data-postid="<%= gif.id %>" data-share-method="host" data-width="500px"
+                data-aspect-ratio="1.2266666666666666">
+                <a href="<%= gif.itemurl %>"></a>
+                <a href="<%= gif.url %>"></a>
+            </div>
+            
 
+        <% }) %>
+    </div>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</body>
+</html>
